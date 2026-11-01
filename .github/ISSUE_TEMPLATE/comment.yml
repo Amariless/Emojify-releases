@@ -1,0 +1,10 @@
+name: Leave a comment
+description: Anything else you want to tell me about Emojify.
+labels: [feedback]
+body:
+  - type: textarea
+    id: comment
+    attributes:
+      label: Your comment
+    validations:
+      required: true

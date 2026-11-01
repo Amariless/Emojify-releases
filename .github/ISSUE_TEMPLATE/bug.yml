@@ -1,0 +1,41 @@
+name: Report a bug
+description: Something in Emojify doesn't work as it should.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Tell me what you saw and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can I make it happen?
+      description: The steps that lead to the problem, if you know them.
+      placeholder: |
+        1. Open ...
+        2. Click ...
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Which distribution are you using?
+      options:
+        - Arch / CachyOS / Manjaro
+        - Fedora
+        - openSUSE
+        - Kubuntu / KDE neon / Debian
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      placeholder: e.g. 1.2.0
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots or a short video help a lot. You can drag them here.

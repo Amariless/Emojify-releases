@@ -1,107 +1,124 @@
 <p align="center">
-  <img src="docs/icon.png" width="96" alt="Icono de Emojify">
+  <img src="docs/icon.png" width="96" alt="Emojify icon">
 </p>
 
 <h1 align="center">Emojify</h1>
 
 <p align="center">
-  Un selector de emojis para KDE Plasma que escribe el emoji donde estabas escribiendo.
+  An emoji picker for KDE Plasma that types the emoji right where you were writing.
 </p>
 
 <p align="center">
-  <a href="https://github.com/Amariless/Emojify-releases/releases/latest"><b>Descargar la última versión</b></a>
-  &nbsp;·&nbsp; Linux con KDE Plasma 6
+  <a href="https://github.com/Amariless/Emojify-releases/releases/download/v0.3.0/emojify-0.3.0-linux.tar.gz"><img src="https://img.shields.io/badge/KDE_Plasma_6-Download_.tar.gz-17161c?style=for-the-badge&labelColor=3b9eda&logo=kde&logoColor=white" alt="Download for KDE Plasma 6"></a>
 </p>
 
 <p align="center">
-  <img src="docs/captura.png" width="640" alt="Emojify buscando corazón sobre el escritorio">
+  <img src="docs/screenshot.png" width="620" alt="Emojify showing heart emojis over the desktop">
 </p>
 
-## Qué es
+## How it works
 
-Pulsas **Meta+.**, escribes lo que buscas y presionas Enter: el emoji aparece en la ventana donde estabas, sea WhatsApp Web, Discord, Telegram, el navegador o la terminal. Sin copiar y pegar a mano.
+1. Press <kbd>Meta</kbd>+<kbd>.</kbd>
+2. Type what you're looking for.
+3. Press <kbd>Enter</kbd>.
 
-- **Abre al instante** y empieza mostrando tus recientes.
-- **Busca como hablas.** Entiende español, español latinoamericano e inglés a la vez ("corazón" o "heart"), sin importar tildes ni mayúsculas, y aunque escribas con errores.
-- **Todo con el teclado.** Flechas para moverte, Enter para insertar, Esc para cerrar.
-- **Tonos de piel, banderas y favoritos**, y oculta los emojis que tu fuente no puede mostrar.
-- **Varios seguidos.** Puedes dejarla abierta e ir insertando emojis mientras sigues escribiendo en el chat.
-- **Funciona sin internet.** Cuando quieras, `emojify --update` descarga los emojis más nuevos.
-- **Respeta tu portapapeles.** Lo que tenías copiado vuelve a su lugar después de insertar.
-- La interfaz está en español, inglés, portugués, francés, alemán e italiano.
+The emoji appears in the window you were using: WhatsApp Web, Discord, Telegram, your browser or the terminal. No copying and pasting by hand.
 
-## Instalación
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>Search your way</h3>
+      <p>Understands English and Spanish at the same time, ignores accents and capitals, and forgives typos.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>Keyboard first</h3>
+      <p>It opens instantly with your recent emojis. Arrows to move, <kbd>Enter</kbd> to insert, <kbd>Esc</kbd> to close.</p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>Out of your way</h3>
+      <p>Works offline and puts back whatever you had copied after it inserts the emoji.</p>
+    </td>
+  </tr>
+</table>
 
-Descarga `emojify-<versión>-linux.tar.gz` desde [Releases](https://github.com/Amariless/Emojify-releases/releases/latest), descomprímelo y ejecuta el instalador:
+**Also:** skin tones, flags, favorites, inserting several emojis in a row without closing, and an interface in English, Spanish, Portuguese, French, German and Italian.
+
+## Install
+
+You need KDE Plasma 6. It's tested on CachyOS and should work on any distribution with Plasma 6, like Fedora KDE, openSUSE, Kubuntu or KDE neon.
+
+1. [Download the .tar.gz](https://github.com/Amariless/Emojify-releases/releases/download/v0.3.0/emojify-0.3.0-linux.tar.gz).
+2. Open a terminal where you downloaded it and run:
 
 ```bash
-tar xzf emojify-0.3.0-linux.tar.gz
-cd emojify-0.3.0-linux
+tar xzf emojify-*-linux.tar.gz
+cd emojify-*-linux
 ./install.sh
 ```
 
-El instalador usa el gestor de paquetes de tu distribución (`pacman`, `apt`, `dnf` o `zypper`) para lo que falte, configura el atajo en KDE y deja Emojify listo para usar. Solo pide la contraseña si hace falta instalar algo del sistema. Al final, pulsa **Meta+.** y pruébalo.
+3. Press <kbd>Meta</kbd>+<kbd>.</kbd> and try it.
 
-Para desinstalar: `./uninstall.sh` (con `--purge` también borra tus ajustes e historial).
+The installer takes care of everything and only asks for your password if it needs to install something on your system. To uninstall, run `./uninstall.sh` from the same folder.
 
-### Dónde funciona
+## Feedback
 
-| | |
-|---|---|
-| Arch, CachyOS, EndeavourOS, Manjaro | Probado en CachyOS con Plasma 6 en Wayland |
-| Fedora KDE, openSUSE Tumbleweed, Kubuntu 24.10+, KDE neon, Debian 13 | Debería funcionar; el instalador soporta sus gestores de paquetes |
-| Plasma 5, GNOME, Hyprland y otros escritorios | No funciona: depende de KWin, el gestor de ventanas de Plasma 6 |
-| Windows y macOS | No. Windows ya trae su propio selector con Win+. |
+Found a bug, have an idea or just want to say something? Each button opens a short form.
 
-Requiere Python 3.11 o más nuevo.
-
-## Uso
-
-| Tecla | Acción |
-|---|---|
-| **Meta+.** | Abrir o cerrar (se puede cambiar) |
-| Escribir | Buscar, sin tener que hacer clic |
-| Flechas | Moverte por los emojis |
-| **Enter** | Insertar |
-| **Shift+Enter** | Insertar sin cerrar (o al revés, según tus ajustes) |
-| Espacio, con la búsqueda vacía | Elegir el tono de piel de ese emoji |
-| Ctrl+D | Añadir o quitar de favoritos |
-| Tab | Pasar entre recientes, favoritos y categorías |
-| Ctrl+, | Ajustes |
-| Esc | Borrar la búsqueda o cerrar |
-
-Con el botón del pin puedes arrastrar la ventana a donde prefieras y se abrirá ahí. Cada pantalla recuerda su posición.
-
-En los ajustes puedes cambiar el atajo, los idiomas de búsqueda, el tono de piel por defecto, el tamaño de la cuadrícula, el tema y si la ventana se cierra al elegir. También se pueden editar en `~/.config/emojify/config.toml`.
+<p>
+  <a href="https://github.com/Amariless/Emojify-releases/issues/new?template=bug.yml"><img src="https://img.shields.io/badge/Report_a_bug-3b9eda?style=for-the-badge" alt="Report a bug"></a>
+  <a href="https://github.com/Amariless/Emojify-releases/issues/new?template=idea.yml"><img src="https://img.shields.io/badge/Suggest_an_idea-3b9eda?style=for-the-badge" alt="Suggest an idea"></a>
+  <a href="https://github.com/Amariless/Emojify-releases/issues/new?template=comment.yml"><img src="https://img.shields.io/badge/Leave_a_comment-3b9eda?style=for-the-badge" alt="Leave a comment"></a>
+</p>
 
 <details>
-<summary><b>Si algo no funciona</b></summary>
+<summary><b>Keyboard shortcuts</b></summary>
+<br>
 
-**El atajo no hace nada.** Ejecuta `emojify --setup` y revisa en *Ajustes del sistema → Atajos → KWin* que "Emojify" tenga Meta+. y que nada más lo use.
-
-**Se abre, pero el emoji no se pega y llega una notificación.** El servicio que envía el pegado no está corriendo. Revisa `systemctl --user status ydotool.service` o vuelve a ejecutar `./install.sh`. Mientras tanto, el emoji queda copiado y puedes pegarlo con Ctrl+V.
-
-**En una app concreta se pega tarde o se pega lo que tenías copiado antes.** Sube `paste_delay_ms` en los ajustes (por ejemplo a 80). Si es una terminal que no reconoce, añade su clase de ventana a `terminals`.
-
-**Al borrar una bandera en la barra de direcciones de Chrome o Brave queda una letra suelta.** No es Emojify: una bandera son dos letras especiales y la barra de Chromium las borra de a una. En cuadros de texto normales se borra completa.
-
-**Registros:** `journalctl --user -u emojify -f`
+| Key | Action |
+|---|---|
+| <kbd>Meta</kbd>+<kbd>.</kbd> | Open or close (you can change it) |
+| Typing | Search, no need to click first |
+| Arrows | Move between emojis |
+| <kbd>Enter</kbd> | Insert |
+| <kbd>Shift</kbd>+<kbd>Enter</kbd> | Insert without closing (or the other way around, in settings) |
+| <kbd>Space</kbd> with an empty search | Choose the skin tone of that emoji |
+| <kbd>Ctrl</kbd>+<kbd>D</kbd> | Add to or remove from favorites |
+| <kbd>Tab</kbd> | Switch between recents, favorites and categories |
+| <kbd>Ctrl</kbd>+<kbd>,</kbd> | Settings |
+| <kbd>Esc</kbd> | Clear the search or close |
 
 </details>
 
 <details>
-<summary><b>Cómo inserta el emoji</b></summary>
+<summary><b>If something doesn't work</b></summary>
+<br>
 
-En Plasma Wayland ninguna app puede escribir texto directamente en otra ventana. Emojify usa el portapapeles sin que lo notes: guarda lo que tenías copiado, copia el emoji (sin que quede en el historial de Klipper), devuelve el foco a tu ventana, envía Ctrl+V (o Ctrl+Shift+V en terminales) y restaura lo que tenías. Todo pasa en unos milisegundos. Si algo falla, el emoji queda copiado y recibes una notificación: nunca falla en silencio.
+**The shortcut does nothing.** Run `emojify --setup` and check in *System Settings → Shortcuts → KWin* that "Emojify" has <kbd>Meta</kbd>+<kbd>.</kbd> and nothing else uses it.
 
-Para esto instala un pequeño script de KWin y una regla de ventana, que puedes ver en los ajustes del sistema. `emojify --unsetup` los quita y devuelve Meta+. al selector de Plasma.
+**It opens, but the emoji isn't pasted and you get a notification.** The service that sends the paste isn't running. Check `systemctl --user status ydotool.service` or run `./install.sh` again. Meanwhile, the emoji is copied and you can paste it with <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+
+**In one specific app it pastes late, or pastes what you had copied before.** Raise `paste_delay_ms` in the settings (to 80, for example). If it's a terminal Emojify doesn't recognize, add its window class to `terminals`.
+
+**Deleting a flag in the Chrome or Brave address bar leaves a stray letter.** That's not Emojify: a flag is made of two special letters and Chromium's address bar deletes them one at a time. In regular text boxes it deletes the whole flag.
+
+**Why only KDE Plasma 6?** Emojify relies on KWin, Plasma's window manager, to put the emoji back in your window. It doesn't work on Plasma 5, GNOME or Hyprland, and Windows already has its own picker with <kbd>Win</kbd>+<kbd>.</kbd>.
+
+**Logs:** `journalctl --user -u emojify -f`
 
 </details>
 
-## Créditos
+<details>
+<summary><b>How it inserts the emoji</b></summary>
+<br>
 
-- Icono: [Sofyan Rofiq](https://www.flaticon.es/autores/sofyan-rofiq) en Flaticon.
-- Datos de emojis: [Emojibase](https://emojibase.dev) y [Unicode CLDR](https://cldr.unicode.org).
-- Emojis: Noto Color Emoji, de Google.
+On Plasma Wayland, no app is allowed to type straight into another window. Emojify uses the clipboard without you noticing: it saves what you had copied, copies the emoji (without adding it to Klipper's history), gives the focus back to your window, sends <kbd>Ctrl</kbd>+<kbd>V</kbd> (or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in terminals) and restores what you had. It all takes a few milliseconds. If something fails, the emoji stays copied and you get a notification: it never fails silently.
 
-Gratis para uso personal. Los términos completos están en [LICENSE](LICENSE).
+To do this it installs a small KWin script and a window rule, which you can see in System Settings. `emojify --unsetup` removes them and gives <kbd>Meta</kbd>+<kbd>.</kbd> back to Plasma's own picker. You can update the emoji list with `emojify --update`. Requires Python 3.11 or newer.
+
+</details>
+
+## Credits
+
+Icon by [Sofyan Rofiq](https://www.flaticon.es/autores/sofyan-rofiq) on Flaticon. Emoji data from [Emojibase](https://emojibase.dev) and [Unicode CLDR](https://cldr.unicode.org). Emojis from Google's Noto Color Emoji.
+
+Free for personal use. The full terms are in [LICENSE](LICENSE).
