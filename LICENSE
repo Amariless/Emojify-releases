@@ -17,3 +17,7 @@ Componentes de terceros / Third-party components:
 - App icon by Sofyan Rofiq (Flaticon): https://www.flaticon.es/autores/sofyan-rofiq
 - Emoji data: Emojibase (MIT), https://emojibase.dev, and Unicode CLDR (Unicode License v3),
   https://cldr.unicode.org
+- Windows build only: Twemoji graphics by Twitter/X (CC-BY 4.0), packaged as a color font by
+  Mozilla (twemoji-colr), https://github.com/mozilla/twemoji-colr
+- Windows build only: Qt 6 / PySide6 (LGPLv3), https://www.qt.io — dynamically linked and
+  replaceable in the installation folder.
